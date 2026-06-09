@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puck — Scoping</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#eef1f4;font-family:Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif;color:#1A1A2E;padding:24px 0 48px}
+.page{max-width:1328px;margin:0 auto;padding:0 24px}
+.pagetitle{font-size:15px;font-weight:600;color:#555555;margin:0 4px 16px}
+.cap{font-size:12px;font-weight:600;color:#8a93a0;margin:0 4px 6px;letter-spacing:.04em;text-transform:uppercase}
+.frame{position:relative;width:100%;margin:0 0 30px;overflow:hidden}
+.slide{width:1280px;height:720px;transform-origin:top left;background:#fff;
+  box-shadow:0 2px 18px rgba(15,39,77,.14);position:relative;overflow:hidden;display:block}
+.po{display:flex}
+.po-left{width:460px;background:#0F274D;color:#fff;display:flex;flex-direction:column;
+  justify-content:center;padding:0 44px;position:relative}
+.po-left .co{font-size:42px;font-weight:800;line-height:1.04;margin-bottom:16px}
+.po-left .po-sub{font-size:22px;font-weight:600;margin-bottom:10px}
+.po-left .aud{font-size:15px;color:#AACCFF}
+.po-left .brand{position:absolute;left:44px;bottom:34px;font-size:13px;font-weight:700}
+.po-left .copy{position:absolute;left:44px;bottom:14px;font-size:9px;color:#AACCFF}
+.po-right{flex:1;display:flex;flex-direction:column;padding:22px 30px;border-left:3px solid #007AC2;position:relative}
+.po-right .row{display:flex;align-items:center;flex:1;border-bottom:1px solid #E3E6EA}
+.po-right .row.last{border-bottom:none}
+.po-right .label{width:236px;flex:none;font-weight:700;color:#1A1A2E;font-size:15px;padding-right:14px}
+.po-right .value{flex:1;color:#555555;font-size:15px}
+.po-right .value.q{color:#0F274D;font-weight:700}
+.po-right .conf{position:absolute;right:16px;bottom:8px;font-size:11px;color:#9aa3af}
+@media print{
+  body{background:#fff;padding:0}
+  .pagetitle,.cap{display:none}
+  .frame{margin:0;page-break-after:always}
+  .slide{box-shadow:none;transform:none!important}
+}
+</style></head>
+<body><div class="page">
+  <div class="pagetitle">Puck &mdash; Scoping &middot; Program Overview &amp; Solutions Map</div>
+  <div class="cap">Slide 1 &middot; Program Overview</div>
+  <div class="frame"><div class="slide po">
+  <div class="po-left">
+    <div class="co">Puck</div>
+    <div class="po-sub">Program Overview</div>
+    <div class="aud">Certification Learners (open to all)</div>
+    <div class="brand">&#9642; skilljar</div>
+    <div class="copy">&copy; Gainsight 2025</div>
+  </div>
+  <div class="po-right">
+    <div class="row"><div class="label">Historical Data Import:</div><div class="value">Net-new certification program — none indicated</div></div><div class="row"><div class="label">Standard Integrations:</div><div class="value">LinkedIn (native credential posting)</div></div><div class="row"><div class="label">Premium Integrations:</div><div class="value">Payment gateway, Caveon exam (native LTI), Proctoring &amp; Badging vendors (TBD), S3 data export</div></div><div class="row"><div class="label">Integrations for Launch:</div><div class="value">Commerce/payment, exam (Caveon/LTI) + proctoring, badging, S3 → CRM &amp; BI</div></div><div class="row"><div class="label">Languages:</div><div class="value q">Which languages at launch?</div></div><div class="row"><div class="label">Learner Authentication:</div><div class="value">Authenticated on Puck&#x27;s website; minimal data passed to Skilljar (SSO)</div></div><div class="row"><div class="label">Monetization:</div><div class="value">Paid certification, self-service; LMS-direct payment recommended vs. Puck-site checkout (TBD)</div></div><div class="row"><div class="label">Site Access Strategy:</div><div class="value">Public — certification open to all; custom domain on Skilljar</div></div><div class="row"><div class="label">Site Theming &amp; Design:</div><div class="value">Puck-owned branding (active rebrand / new colors) on Skilljar template; low-code + full HTML/CSS</div></div><div class="row"><div class="label">Targeted Go-Live:</div><div class="value">Implementation starts ~4 weeks after signing; POC demo first</div></div><div class="row last"><div class="label">Total Learners (#):</div><div class="value q">Expected number of learners (MAU)?</div></div>
+    <div class="conf">Confidential</div>
+  </div>
+</div></div>
+  <div class="cap">Slide 2 &middot; Solutions Map</div>
+  <div class="frame"><svg viewBox="0 0 1280 720" class="slide sm" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#16243B" flood-opacity="0.17"/></filter><linearGradient id="hubg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2BB0E8"/><stop offset="1" stop-color="#0B6FB2"/></linearGradient></defs>
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC"/>
+<text text-anchor="middle" font-size="25" font-weight="700" fill="#16243B" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="640.0" y="48.2">Puck Solutions Map</tspan></text>
+<rect x="30.0" y="54.0" width="176.0" height="116.0" rx="12" fill="#FFFFFF" stroke="#E5E9F0" stroke-width="1" filter="url(#sh)"/>
+<rect x="46.0" y="74.0" width="28.0" height="17.0" rx="5" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.4"/>
+<text text-anchor="start" font-size="12" font-weight="400" fill="#16243B" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="84.0" y="87.0">Application</tspan></text>
+<circle cx="60.0" cy="112.0" r="11.0" fill="#4BBE92"/>
+<text text-anchor="start" font-size="12" font-weight="400" fill="#16243B" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="84.0" y="116.0">Integration Path</tspan></text>
+<rect x="46.0" y="133.0" width="28.0" height="17.0" rx="5" fill="#FFE0DB" stroke="#E0675A" stroke-width="1.4"/>
+<text text-anchor="start" font-size="12" font-weight="400" fill="#16243B" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="84.0" y="146.0">Unknown Scope</tspan></text>
+<path d="M 198.0 204.0 C 209.5 204.0 209.5 204.0 221.0 204.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 291.0 204.0 C 426.5 204.0 426.5 366.0 562.0 366.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 198.0 342.0 C 209.5 342.0 209.5 342.0 221.0 342.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 291.0 342.0 C 426.5 342.0 426.5 366.0 562.0 366.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 198.0 480.0 C 209.5 480.0 209.5 480.0 221.0 480.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round" stroke-dasharray="1 7"/>
+<path d="M 291.0 480.0 C 426.5 480.0 426.5 366.0 562.0 366.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round" stroke-dasharray="1 7"/>
+<path d="M 198.0 618.0 C 209.5 618.0 209.5 618.0 221.0 618.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round" stroke-dasharray="1 7"/>
+<path d="M 291.0 618.0 C 426.5 618.0 426.5 366.0 562.0 366.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round" stroke-dasharray="1 7"/>
+<path d="M 718.0 366.0 C 737.5 366.0 737.5 204.0 757.0 204.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 827.0 204.0 C 847.5 204.0 847.5 204.0 868.0 204.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 718.0 366.0 C 737.5 366.0 737.5 618.0 757.0 618.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 827.0 618.0 C 847.5 618.0 847.5 618.0 868.0 618.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 640.0 114.0 C 640.0 114.0 640.0 323.0 640.0 323.0" fill="none" stroke="#C3CCD7" stroke-width="2.0" stroke-linecap="round"/>
+<path d="M 944.0 618.0 C 1047.0 618.0 1047.0 204.0 1150.0 204.0" fill="none" stroke="#C3CCD7" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M 944.0 618.0 C 1047.0 618.0 1047.0 618.0 1150.0 618.0" fill="none" stroke="#C3CCD7" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="256.0" cy="204.0" r="35.0" fill="#F0938B" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="7.8" font-weight="700" fill="#0E3B2A" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="256.0" y="197.4">External</tspan><tspan x="256.0" y="206.6">Payment</tspan><tspan x="256.0" y="215.8">Processor</tspan></text>
+<circle cx="256.0" cy="342.0" r="35.0" fill="#4BBE92" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="7.8" font-weight="700" fill="#0E3B2A" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="256.0" y="335.4">Skilljar</tspan><tspan x="256.0" y="344.6">LTI</tspan><tspan x="256.0" y="353.8">Integration</tspan></text>
+<circle cx="256.0" cy="480.0" r="35.0" fill="#F0938B" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="7.8" font-weight="700" fill="#0E3B2A" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="256.0" y="482.6">API / JS</tspan></text>
+<circle cx="256.0" cy="618.0" r="35.0" fill="#F0938B" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="7.8" font-weight="700" fill="#0E3B2A" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="256.0" y="620.6">API</tspan></text>
+<circle cx="792.0" cy="204.0" r="35.0" fill="#4BBE92" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="7.8" font-weight="700" fill="#0E3B2A" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="792.0" y="202.0">Native</tspan><tspan x="792.0" y="211.2">Integration</tspan></text>
+<circle cx="792.0" cy="618.0" r="35.0" fill="#4BBE92" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="7.8" font-weight="700" fill="#0E3B2A" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="792.0" y="620.6">Data Export</tspan></text>
+<rect x="46.0" y="178.0" width="152.0" height="52.0" rx="12" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="207.8">Payment Gateway</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="242.8">*LMS-direct (recommended) vs.</tspan><tspan x="122.0" y="252.8">Puck-site checkout — TBD</tspan></text>
+<rect x="46.0" y="316.0" width="152.0" height="52.0" rx="12" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="345.8">Caveon</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="380.8">*Native exam integration via</tspan><tspan x="122.0" y="390.8">LTI</tspan></text>
+<rect x="46.0" y="454.0" width="152.0" height="52.0" rx="12" fill="#FFE0DB" stroke="#E0675A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="483.8">Proctoring Vendor</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="513.8">*Vendor TBD; API integration</tspan><tspan x="122.0" y="523.8">likely; clean launch from</tspan><tspan x="122.0" y="533.8">Skilljar</tspan></text>
+<rect x="46.0" y="592.0" width="152.0" height="52.0" rx="12" fill="#FFE0DB" stroke="#E0675A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="621.8">Badging Vendor</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="122.0" y="661.8">*Not yet selected</tspan></text>
+<rect x="868.0" y="178.0" width="152.0" height="52.0" rx="12" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="944.0" y="207.8">LinkedIn</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="944.0" y="242.8">*Credential posting + organic</tspan><tspan x="944.0" y="252.8">lead gen</tspan></text>
+<g filter="url(#sh)"><path d="M 868.0 599.5 L 868.0 636.5 A 76.0 7.5 0 0 0 1020.0 636.5 L 1020.0 599.5" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.5"/><ellipse cx="944.0" cy="599.5" rx="76.0" ry="7.5" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.5"/></g>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="944.0" y="621.8">S3 Bucket</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="944.0" y="661.8">*Certification data export</tspan></text>
+<g filter="url(#sh)"><path d="M 1074.0 185.5 L 1074.0 222.5 A 76.0 7.5 0 0 0 1226.0 222.5 L 1226.0 185.5" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.5"/><ellipse cx="1150.0" cy="185.5" rx="76.0" ry="7.5" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.5"/></g>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="1150.0" y="207.8">Homegrown CRM</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="1150.0" y="247.8">*Puck subscriber database</tspan></text>
+<rect x="1074.0" y="592.0" width="152.0" height="52.0" rx="12" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="1150.0" y="621.8">BI Tools</tspan></text>
+<text text-anchor="middle" font-size="8.5" font-weight="400" fill="#8A93A0" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="1150.0" y="661.8">*Reporting &amp; customer profiles</tspan></text>
+<rect x="542.0" y="88.0" width="196.0" height="52.0" rx="12" fill="#FFF1CE" stroke="#E2A23A" stroke-width="1.6" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E2A3D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="640.0" y="111.0">Customers login</tspan><tspan x="640.0" y="124.6">via Puck Website</tspan></text>
+<rect x="562.0" y="323.0" width="156" height="86" rx="16" fill="url(#hubg)" filter="url(#sh)"/>
+<text text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="640.0" y="371.6">Skilljar</tspan></text>
+<rect x="1002.0" y="401.5" width="90.0" height="19.0" rx="4" fill="#FFFFFF" fill-opacity="0.9"/>
+<text text-anchor="middle" font-size="8.5" font-weight="700" fill="#555555" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="1047.0" y="413.8">Subscriber data</tspan></text>
+<text text-anchor="start" font-size="12" font-weight="700" fill="#0F274D" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="40.0" y="704.0">▪ skilljar</tspan></text>
+<text text-anchor="middle" font-size="9" font-weight="400" fill="#555555" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="640.0" y="705.0">© Gainsight 2025</tspan></text>
+<text text-anchor="end" font-size="9" font-weight="400" fill="#555555" font-family="Calibri, 'Segoe UI', Carlito, system-ui, -apple-system, Arial, sans-serif"><tspan x="1240.0" y="705.0">Confidential</tspan></text>
+</svg></div>
+</div><script>
+function fit(){document.querySelectorAll('.frame').forEach(function(f){
+  var s=f.querySelector('.slide');var k=Math.min(1,f.clientWidth/1280);
+  s.style.transform='scale('+k+')';f.style.height=(720*k)+'px';});}
+window.addEventListener('resize',fit);window.addEventListener('load',fit);fit();
+</script></body></html>
